@@ -17,6 +17,20 @@ $timberwolf: #DAD7CD;
             color: inherit;
         }
 
+        button {
+            width: max-content;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid red;
+            color: green;
+
+            &:hover {
+                border: 1px solid blue;
+            }
+        }
+
         // -----------------------------
         // LOGIN & REGISTER PAGE 
         // -----------------------------
@@ -208,19 +222,19 @@ $timberwolf: #DAD7CD;
                         p {
                             font-size: 18px;
                         }
-                        button {
-                            width: max-content;
-                            padding: 10px 20px;
-                            border: none;
-                            cursor: pointer;
-                            background-color: white;
-                            border: 1px solid red;
-                            color: green;
+                        // button {
+                        //     width: max-content;
+                        //     padding: 10px 20px;
+                        //     border: none;
+                        //     cursor: pointer;
+                        //     background-color: white;
+                        //     border: 1px solid red;
+                        //     color: green;
 
-                            &:hover {
-                                border: 1px solid blue;
-                            }
-                        }
+                        //     &:hover {
+                        //         border: 1px solid blue;
+                        //     }
+                        // }
                     }
                 }
             }
@@ -247,7 +261,6 @@ $timberwolf: #DAD7CD;
                     width: 100%;
                     height: 300px;
                     object-fit: cover;
-
                 }
                 
                 // User image
@@ -287,10 +300,37 @@ $timberwolf: #DAD7CD;
                     line-height: 30px;
                 }
             }
-
+            // Spacing for right menu bar
             .menu {
                 // Set spacing of menu bar in flexbox
                 flex: 2;
+                // Set vertical alignment
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                // Posts menu title
+                h2 {
+                    font-size: 20px;
+                    color: red;
+                }
+                // For each post in the menu
+                .post {
+                    display: flex;
+                    flex-direction: column;
+                    // Between image title and the button
+                    gap: 10px;
+
+                    // Size of image in the right menu bar
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    // Post title
+                    h3 {
+                        color: red;
+                    }
+                }
             }
         }
     }

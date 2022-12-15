@@ -2,7 +2,7 @@ import React from 'react'
 import Edit from '../assets/img/edit.png'
 import Delete from '../assets/img/delete.png'
 import { Link } from 'react-router-dom'
-
+import Menu from "../components/Menu";
 
 const Single = () => {
   return (
@@ -24,13 +24,11 @@ const Single = () => {
             <img src={Delete} alt="" />
           </div>
         </div>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!</p>
       </div>
-      {/* MENU BAR */}
-      <div className="menu">
-        MMMM
-      </div>
+      {/* MENU BAR - Calling Menu components from ../components/Menu.jsx*/}
+      <Menu />
     </div>
   )
 }
