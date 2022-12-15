@@ -1,6 +1,7 @@
 // COLOURS
 $honeyDew : #DAF1DE;
-
+$brunswickGreen: #235347;
+$timberwolf: #DAD7CD;
 
 .app {
     // Centering all content 
@@ -124,6 +125,26 @@ $honeyDew : #DAF1DE;
                         }
                     }
                 }
+            }
+        }
+        // -----------------------------
+        // FOOTER 
+        // -----------------------------
+        footer {
+            // Spacing between footer and main content
+            margin-top: 100px;
+
+            padding: 20px;
+            background-color: $timberwolf;
+
+            // Horizontal alignment
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // Footer message 
+            font-size: 12px;
+            img {
+                height: 50px;
             }
         }
     }
