@@ -79,6 +79,8 @@ $timberwolf: #DAD7CD;
         // NAVBAR 
         // -----------------------------
         .navbar {
+            // Margin from botton of nav to content
+            margin-bottom: 50px;
             .container {
                 padding: 10px 0px;
                 // Make navbar horizontal 
@@ -145,6 +147,82 @@ $timberwolf: #DAD7CD;
             font-size: 12px;
             img {
                 height: 50px;
+            }
+        }
+        // -----------------------------
+        // HOME PAGE 
+        // -----------------------------
+        .home {
+            .posts {
+                //
+                display: flex;
+                flex-direction: column;
+                // Gap between each post
+                gap: 150px;
+
+                .post {
+                    // Horizontal align each post
+                    display: flex;
+                    // Gap between image and text
+                    gap: 100px;
+
+                    // Odd number posts have image on right
+                    // and content on the left
+                    &:nth-child(2n + 1) {
+                        flex-direction: row-reverse;
+                    }
+                    .img {
+                        flex: 2;
+                        // Adding in box behind image for aesthetic purposes
+                        // Making the initial point the top left of the image
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-color: red;
+                            // Set absolute position relative to parent (post image)
+                            position: absolute;
+                            top: 20px;
+                            left: -20px;
+                            // Setting box behind post image
+                            z-index: -1;
+                        }
+                        img {
+                            // Set image size to parent div
+                            width: 100%;
+                            max-height: 300px;
+                            object-fit: cover;
+                        }
+                    }
+                    .content {
+                        flex: 3;
+                        // Aligning vertically
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1 {
+                            font-size: 38px;
+                        }
+                        p {
+                            font-size: 18px;
+                        }
+                        button {
+                            width: max-content;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: white;
+                            border: 1px solid red;
+                            color: green;
+
+                            &:hover {
+                                border: 1px solid blue;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
