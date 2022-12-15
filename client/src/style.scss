@@ -1,11 +1,24 @@
 // COLOURS
-$cornSilk : #FFF7DB;
+$honeyDew : #DAF1DE;
+
 
 .app {
-
+    // Centering all content 
+    display: flex;
+    justify-content: center;
     .container {
+        // Width of main content container 
+        width: 1024px;
 
-        // LOGIN & REGISTER PAGE STYLING
+        // Styling of all links
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        // -----------------------------
+        // LOGIN & REGISTER PAGE 
+        // -----------------------------
         .auth {
             // Centering form horizontally
             display: flex;
@@ -14,7 +27,7 @@ $cornSilk : #FFF7DB;
             // Center vertically
             height: 100vh;
             // Set background colour
-            background-color: $cornSilk;
+            background-color: $honeyDew;
             // Set h1 above form
             flex-direction: column;
 
@@ -58,6 +71,58 @@ $cornSilk : #FFF7DB;
                 span {
                     font-size: 12px;
                     text-align: center;
+                }
+            }
+        }
+        // -----------------------------
+        // NAVBAR 
+        // -----------------------------
+        .navbar {
+            .container {
+                padding: 10px 0px;
+                // Make navbar horizontal 
+                display: flex;
+                // Seperating logo and links
+                justify-content: space-between;
+                // Center items
+                align-items: center;
+                .logo {
+                    // Decrease image size
+                    img {
+                        width: 120px;
+                    }
+
+                }
+                .links {
+                    // Set links to horizontal
+                    display: flex;
+                    // Center links 
+                    align-items: center;
+                    // Gap between nav links
+                    gap: 20px;
+                    text-transform: uppercase;
+
+                    h6 {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+
+                    .write {
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
                 }
             }
         }
