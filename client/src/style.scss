@@ -16,21 +16,6 @@ $timberwolf: #DAD7CD;
             text-decoration: none;
             color: inherit;
         }
-
-        button {
-            width: max-content;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            background-color: white;
-            border: 1px solid red;
-            color: green;
-
-            &:hover {
-                border: 1px solid blue;
-            }
-        }
-
         // -----------------------------
         // LOGIN & REGISTER PAGE 
         // -----------------------------
@@ -222,19 +207,19 @@ $timberwolf: #DAD7CD;
                         p {
                             font-size: 18px;
                         }
-                        // button {
-                        //     width: max-content;
-                        //     padding: 10px 20px;
-                        //     border: none;
-                        //     cursor: pointer;
-                        //     background-color: white;
-                        //     border: 1px solid red;
-                        //     color: green;
+                        button {
+                            width: max-content;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: white;
+                            border: 1px solid red;
+                            color: green;
 
-                        //     &:hover {
-                        //         border: 1px solid blue;
-                        //     }
-                        // }
+                            &:hover {
+                                border: 1px solid blue;
+                            }
+                        }
                     }
                 }
             }
@@ -328,6 +313,103 @@ $timberwolf: #DAD7CD;
                     }
                     // Post title
                     h3 {
+                        color: red;
+                    }
+                }
+                // Side menu buttons
+                button {
+                    width: max-content;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 1px solid pink;
+                    color: green;
+
+                    &:hover {
+                        border: 1px solid blue;
+                    }
+                }
+            }
+        }
+        // -----------------------------
+        // WRITE POST PAGE
+        // -----------------------------
+        .write-post {
+            display: flex;
+            // Gap between menu and content
+            gap: 20px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+                .editor-container {
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgray;
+                    .editor {
+                        height: 100%;
+                        border: none;
+                    }
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    // Set same width for all items
+                    flex: 1;
+                    // Vertical align
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    color: red;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                    .file {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        // Targeting Save as a Draft button
+                        :first-child {
+                            cursor: pointer;
+                            color: red;
+                            background-color: white;
+                            border: 1px solid red;
+                            padding: 3px 5px;
+                        }
+                        :last-child {
+                            cursor: pointer;
+                            color: blue;
+                            background-color: white;
+                            border: 1px solid red;
+                            padding: 3px 5px;
+                        }
+                    }
+                    .category {
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
                         color: red;
                     }
                 }
